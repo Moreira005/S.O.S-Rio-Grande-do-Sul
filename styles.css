@@ -1,19 +1,27 @@
-.titulo{
+.titulo {
     text-align: center;
-    background-color: #f30707f3;
     border-radius: 3px;
-  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
-   
+    color: black;
+    font-size: 25px;
+    background-color: #fff;
+    width: 50%;
+    transform: translate(50%, 10%);
+    box-shadow: 4px 4px 4px 4px black;
 }
 
+h5 {
+    transform: translate(0%,-80%);
+
+}
 
 body {
    
     font-family: 'Times New Roman', Times, serif, sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     color: #000000ce;
+    background-image: url("https://fastcompanybrasil.com/wp-content/uploads/2024/05/KV_Site-22.jpg");
+    background-size: cover;
 }
 header {
     display: flex;
@@ -38,9 +46,31 @@ footer {
     text-align: center;
 }
 
-.flex_container{
+.flex-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
 }
 
+button {
+    width: 150px;
+    height: 40px;
+    border-radius: 0%;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px black;
+    transition: transform 200ms ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+.informacoes {
+    background-color: #fff;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+    width: 30%;
+    text-align: justify;
+}
