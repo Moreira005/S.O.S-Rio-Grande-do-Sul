@@ -1,64 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>S.O.S Rio Grande do Sul</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='styles.css'>
-
+   
 </head>
 <body>
-
     <div class="titulo">
-
         <h1><b>S.O.S Rio Grande do Sul</b></h1>
-        <p>
-        <h5><b> VENHA AJUDAR A REGIÃO SUL DO BRASIL! </b></h5>
-        </p>
-
+        <p><h5><b> VENHA AJUDAR A REGIÃO SUL DO BRASIL! </b></h5></p>
     </div>
 
     <section>
         <div class="flex-container">
-            
-            <button onclick="showHowToHelp()"><b>Como ajudar?</b></button>
-            <button onclick="showDonations()"><b>Doações via PIX</b></button>
-            <button onclick="showCollectionPoints()"><b>Pontos de coleta</b></button>
+            <button onclick="showInfo()"><b>Informações</b></button>
+            <button onclick="showComoAjudar()"><b>Como ajudar?</b></button>
+            <button onclick="showDoacoes()"><b>Doações via PIX</b></button>
+            <button onclick="showColetaPontos()"><b>Pontos de coleta</b></button>
+        </div>
 
+        <div id="info" class="hidden">
+            <p></p>O Rio Grande do Sul, estado situado na região sul do Brasil, está passando por uma situação alarmante devido a
+            uma série de fatores que estão causando um grande impacto na população local. As intensas chuvas que têm
+            assolado a região resultaram em enchentes e deslizamentos de terra em várias áreas, causando perdas de vidas,
+            desabrigados e danos consideráveis à infraestrutura, residências e propriedades. Até o momento, mais de 400
+            municípios do Sul foram afetados pelas enchentes, e estima-se que pelo menos 538.245 habitantes do Rio Grande do
+            Sul tenham sido prejudicados. Segundo o levantamento da Defesa Civil local, o
+            desastre já deixou mais de 160 mortos confirmados. Além disso, o órgão relata que 76.884 pessoas
+            estão atualmente abrigadas, representando uma diminuição em relação aos números do levantamento anterior,
+            realizado em 13 de maio de 2024. Mais de 2.124.203 indivíduos foram impactados pelas chuvas, e 806 ficaram
+            feridos. Diante dessa situação de emergência, é essencial que todos se unam em solidariedade e empatia para
+            ajudar as comunidades atingidas a se reerguerem.</p>
+
+            <p>Além das pessoas afetadas, também não podemos esquecer dos animais domésticos que estão sofrendo com essa tragédia. Inúmeros animais se encontram desabrigados, feridos ou sem acesso a recursos para sua sobrevivência. Desso modo, sua doação de ração para cães e gatos faz-se fundamental nesse momento. Afinal, esses companheiros leais fazem parte das famílias afetadas e também merecem nossa atenção e cuidados. Cada saco de ração doado pode significar uma refeição para um animal faminto e desamparado, trazendo conforto e carinho em meio às dificuldades. </p>
+
+            <b>Você pode fazer a diferença!</b> Contribua com o que puder, seja com doações em pontos de coleta, dinheiro ou itens de
+            necessidade básica. Sua ajuda será essencial para ajudar as famílias a reconstruírem suas vidas e
+            recuperarem a esperança em meio à adversidade. Juntos, podemos fazer uma grande diferença e mostrar o
+            verdadeiro espírito de solidariedade e compaixão.
+        </div>
+
+        <div id="comoAjudar" class="hidden">
+            <p><b>Cada doação faz a diferença e pode oferecer esperança e apoio às pessoas que enfrentam essa terrível tragédia. Portanto, contribua das seguintes formas:</b></p>
+            <ul>
+                <li>Realizando doações por via PIX, por meio da chave: <strong>1234567890</strong></li>
+                <li>Contribuindo com alimentos não perecíveis, roupas, água potável, rações para animais domésticos e produtos de higiene pessoal nos pontos de coleta.</li>
+            </ul> 
+            
+        </div>
+
+        <div id="doacoes" class="hidden">
+            <h3>Doações via PIX:</h3>
+            <form id= "pixForm" onsubmit="submitForm(event)">
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+                <label for="sobrenome">Sobrenome:</label><br>
+                <input type="text" id="sobrenome" name="sobrenome" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="celular">Número do celular:</label><br>
+                <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(00) 12345-6789" required><br>
+                <label for="chavePix">Chave PIX:</label><br>
+                <input type="text" id="chavePix" name="chavePix" required><br>
+                <label for="valor">Valor da doação (R$):</label><br>
+                <input type="number" id="valor" name="valor" min="1" required><br><br>
+                <button type="submit">Doar</button>
+        </div>
+
+        <div id="coletaPontos" class="hidden">
+            <p><b>Encontre o ponto de coleta mais próximo:</b></p>
+            <ul>
+                <li>Pátio externo do Centro Administrativo Estadual, localizado no bairro de Jaguaribe, em João Pessoa - PB. O horário de funcionamento é apartir das 8h até às 16h30. </li>
+                <li>Endereço 2</li>
+                <li>Endereço 3</li>
+            </ul>
 
         </div>
     </section>
 
-    <div class="informacoes">
-        O Rio Grande do Sul, estado situado na região sul do Brasil, está passando por uma situação alarmante devido a
-        uma série de fatores que estão causando um grande impacto na população local. As intensas chuvas que têm
-        assolado a região resultaram em enchentes e deslizamentos de terra em várias áreas, causando perdas de vidas,
-        desabrigados e danos consideráveis à infraestrutura, residências e propriedades. Até o momento, mais de 400
-        municípios do Sul foram afetados pelas enchentes, e estima-se que pelo menos 538.245 habitantes do Rio Grande do
-        Sul tenham sido prejudicados. Segundo levantamento da Defesa Civil local divulgado em 14 de maio de 2024, o
-        desastre já deixou 148 mortos confirmados e 124 desaparecidos. Além disso, o órgão relata que 76.884 pessoas
-        estão atualmente abrigadas, representando uma diminuição em relação aos números do levantamento anterior,
-        realizado em 13 de maio de 2024. Mais de 2.124.203 indivíduos foram impactados pelas chuvas, e 806 ficaram
-        feridos. Diante dessa situação de emergência, é essencial que todos se unam em solidariedade e empatia para
-        ajudar as comunidades atingidas a se reerguerem. Cada doação faz a diferença e pode oferecer esperança e apoio
-        às pessoas que enfrentam essa terrível tragédia. Alimentos não perecíveis, água potável, roupas e produtos de
-        higiene pessoal, são urgentemente necessários para fornecer assistência às vítimas.
-        
-        <p></p>
-        
-        <div>
-            <b>Você pode fazer a diferença!</b> Contribua com o que puder, seja com doações, em dinheiro ou itens de
-            necessidade básica. Sua ajuda será fundamental para ajudar as famílias a reconstruírem suas vidas e
-            recuperarem a esperança em meio à adversidade. Juntos, podemos fazer uma grande diferença e mostrar o
-            verdadeiro espírito de solidariedade e compaixão.
-        </div>
-    
-    </div>
+    <script>
+        function showInfo() {
+            hideAllSections();
+            document.getElementById('info').classList.remove('hidden');
+        }
 
+        function showComoAjudar() {
+            hideAllSections();
+            document.getElementById('comoAjudar').classList.remove('hidden');
+        }
 
+        function showDoacoes() {
+            hideAllSections();
+            document.getElementById('doacoes').classList.remove('hidden');
+        }
 
+        function showColetaPontos() {
+            hideAllSections();
+            document.getElementById('coletaPontos').classList.remove('hidden');
+        }
 
+        function hideAllSections() {
+            document.getElementById('info').classList.add('hidden');
+            document.getElementById('comoAjudar').classList.add('hidden');
+            document.getElementById('doacoes').classList.add('hidden');
+            document.getElementById('coletaPontos').classList.add('hidden');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            const form = document.getElementById('pixForm');
+            const formData = new FormData(form);
+            const nome = formData.get('nome');
+            const sobrenome = formData.get('sobrenome');
+            const email = formData.get('email');
+            const celular = formData.get('celular');
+            const chavePix = formData.get('chavePix');
+            const valor = formData.get('valor');
+            document.getElementById('mensagem').innerText = `Obrigado, ${nome} ${sobrenome}! Sua doação de R$${valor},00 via PIX (${chavePix}) foi recebida com sucesso. Entraremos em contato pelo email ${email} ou pelo número do celular ${celular} para confirmar os detalhes.`;
+            form.reset();
+        }
+    </script>
 </body>
 </html>
