@@ -21,6 +21,7 @@ body {
     background-color: #f5f5f5;
     color: #000000ce;
     background-size: cover;
+    background-image: url("imagens/Rio-Grande-do-Sul-1111x740.jpg");
 }
 header {
     display: flex;
@@ -113,6 +114,7 @@ button:hover {
     margin-bottom: 40px;
     display: flex;
 }
-.cor{
-    
+
+label {
+    color:rgb(2, 2, 1);
 }

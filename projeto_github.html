@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>S.O.S Rio Grande do Sul</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='styles.css'>
-    <style>
-        label {
-            color:rgb(2, 2, 1);
-        }
-    </style>
+    <script src="script.js" defer></script>
+
 </head>
+
 <body>
+
     <div class="titulo">
         <h1><b>S.O.S Rio Grande do Sul</b></h1>
-        <p><h5><b> VENHA AJUDAR A REGIÃO SUL DO BRASIL! </b></h5></p>
+        <p>
+        <h5><b> VENHA AJUDAR A REGIÃO SUL DO BRASIL! </b></h5>
+        </p>
     </div>
 
     <section>
@@ -27,11 +30,14 @@
         </div>
 
         <div id="info" class="hidden">
-            <p></p>O Rio Grande do Sul, estado situado na região sul do Brasil, está passando por uma situação alarmante devido a
+            <p></p>O Rio Grande do Sul, estado situado na região sul do Brasil, está passando por uma situação alarmante
+            devido a
             uma série de fatores que estão causando um grande impacto na população local. As intensas chuvas que têm
-            assolado a região resultaram em enchentes e deslizamentos de terra em várias áreas, causando perdas de vidas,
+            assolado a região resultaram em enchentes e deslizamentos de terra em várias áreas, causando perdas de
+            vidas,
             desabrigados e danos consideráveis à infraestrutura, residências e propriedades. Até o momento, mais de 400
-            municípios do Sul foram afetados pelas enchentes, e estima-se que pelo menos 538.245 habitantes do Rio Grande do
+            municípios do Sul foram afetados pelas enchentes, e estima-se que pelo menos 538.245 habitantes do Rio
+            Grande do
             Sul tenham sido prejudicados. Segundo o levantamento da Defesa Civil local, o
             desastre já deixou mais de 160 mortos confirmados. Além disso, o órgão relata que 76.884 pessoas
             estão atualmente abrigadas, representando uma diminuição em relação aos números do levantamento anterior,
@@ -39,25 +45,33 @@
             feridos. Diante dessa situação de emergência, é essencial que todos se unam em solidariedade e empatia para
             ajudar as comunidades atingidas a se reerguerem.</p>
 
-            <p>Além das pessoas afetadas, também não podemos esquecer dos animais domésticos que estão sofrendo com essa tragédia. Inúmeros animais se encontram desabrigados, feridos ou sem acesso a recursos para sua sobrevivência. Desso modo, sua doação de ração para cães e gatos faz-se fundamental nesse momento. Afinal, esses companheiros leais fazem parte das famílias afetadas e também merecem nossa atenção e cuidados. Cada saco de ração doado pode significar uma refeição para um animal faminto e desamparado, trazendo conforto e carinho em meio às dificuldades. </p>
+            <p>Além das pessoas afetadas, também não podemos esquecer dos animais domésticos que estão sofrendo com essa
+                tragédia. Inúmeros animais se encontram desabrigados, feridos ou sem acesso a recursos para sua
+                sobrevivência. Desso modo, sua doação de ração para cães e gatos faz-se fundamental nesse momento.
+                Afinal, esses companheiros leais fazem parte das famílias afetadas e também merecem nossa atenção e
+                cuidados. Cada saco de ração doado pode significar uma refeição para um animal faminto e desamparado,
+                trazendo conforto e carinho em meio às dificuldades. </p>
 
-            <b>Você pode fazer a diferença!</b> Contribua com o que puder, seja com doações em pontos de coleta, dinheiro ou itens de
+            <b>Você pode fazer a diferença!</b> Contribua com o que puder, seja com doações em pontos de coleta,
+            dinheiro ou itens de
             necessidade básica. Sua ajuda será essencial para ajudar as famílias a reconstruírem suas vidas e
             recuperarem a esperança em meio à adversidade. Juntos, podemos fazer uma grande diferença e mostrar o
             verdadeiro espírito de solidariedade e compaixão.
         </div>
 
         <div id="comoAjudar" class="hidden">
-            <p><b>Cada doação faz a diferença e pode oferecer esperança e apoio às pessoas que enfrentam essa terrível tragédia. Portanto, contribua das seguintes formas:</b></p>
+            <p><b>Cada doação faz a diferença e pode oferecer esperança e apoio às pessoas que enfrentam essa terrível
+                    tragédia. Portanto, contribua das seguintes formas:</b></p>
             <ul>
                 <li>Realizando doações por via PIX, por meio da chave: <strong>1234567890</strong></li>
-                <li>Contribuindo com alimentos não perecíveis, roupas, água potável, rações para animais domésticos e produtos de higiene pessoal nos pontos de coleta.</li>
-            </ul> 
+                <li>Contribuindo com alimentos não perecíveis, roupas, água potável, rações para animais domésticos e
+                    produtos de higiene pessoal nos pontos de coleta.</li>
+            </ul>
         </div>
 
         <div id="doacoes" class="hidden">
             <h3>Doações via PIX:</h3>
-            <form id= "pixForm" onsubmit="submitForm(event)">
+            <form id="pixForm" onsubmit="submitForm(event)">
                 <label for="nome">Nome:</label><br>
                 <input type="text" id="nome" name="nome" required><br>
                 <label for="sobrenome">Sobrenome:</label><br>
@@ -65,7 +79,8 @@
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br>
                 <label for="celular">Número do celular:</label><br>
-                <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(00) 12345-6789" required><br>
+                <input type="tel" id="celular" name="celular" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
+                    placeholder="(00) 12345-6789" required><br>
                 <label for="chavePix">Chave PIX:</label><br>
                 <input type="text" id="chavePix" name="chavePix" required><br>
                 <label for="valor">Valor da doação (R$):</label><br>
@@ -76,121 +91,93 @@
         <div id="coletaPontos" class="hidden">
             <p><b>Encontre o ponto de coleta mais próximo:</b></p>
             <ul>
-                <li>Pátio externo do Centro Administrativo Estadual, localizado no bairro de Jaguaribe, em João Pessoa - PB. O horário de funcionamento é apartir das 8h até às 16h30. </li>
-                <li>Endereço 2</li>
-                <li>Endereço 3</li>
+                <li>Pátio externo do Centro Administrativo Estadual, localizado no bairro de Jaguaribe, em João Pessoa -
+                    PB. O horário de funcionamento é apartir das 8h até às 16h30. </li>
+                <li>No estádio Almeidão, das 8h às 17h.</li>
+                <li>Parque Solón de Lucena, localizado no centro da capital, na associação Abrace, no prédio de nº 667,
+                    ao lado do INSS, das 8h às 17h.</li>
             </ul>
 
         </div>
     </section>
 
-    <script>
-        function showInfo() {
-            hideAllSections();
-            document.getElementById('info').classList.remove('hidden');
-        }
+    <figure>
+        <img src="file:///C:/Users/Gustavo/Downloads/imagem_2024-05-28_160433087-removebg-preview.png"
+            alt="Produtos de limpeza">
+        <figcaption>
+            <form>
+                <label for="produto1"><b>Veja acima exemplos de produtos de limpeza que podem ser doados.</b></label>
+            </form>
+        </figcaption>
+    </figure>
 
-        function showComoAjudar() {
-            hideAllSections();
-            document.getElementById('comoAjudar').classList.remove('hidden');
-        }
+    <figure>
+        <img src="file:///C:/Users/Gustavo/Downloads/imagem_2024-05-28_160027803-removebg-preview.png"
+            alt="Produtos de banho">
+        <figcaption>
+            <form>
+                <label for="produto2"><b>Veja acima exemplos de produtos de higiene pessoal que pode ser
+                        doado.</b></label>
+            </form>
+        </figcaption>
+    </figure>
 
-        function showDoacoes() {
-            hideAllSections();
-            document.getElementById('doacoes').classList.remove('hidden');
-        }
+    <figure>
+        <img src="file:///C:/Users/Gustavo/Downloads/imagem_2024-05-28_160633890-removebg-preview.png" alt="Comida">
+        <figcaption>
+            <form>
+                <label for="produto3"><b>Veja acima exemplos de alimentos que podem ser doados.</b></label>
+            </form>
+        </figcaption>
+    </figure>
 
-        function showColetaPontos() {
-            hideAllSections();
-            document.getElementById('coletaPontos').classList.remove('hidden');
-        }
 
-        function hideAllSections() {
-            document.getElementById('info').classList.add('hidden');
-            document.getElementById('comoAjudar').classList.add('hidden');
-            document.getElementById('doacoes').classList.add('hidden');
-            document.getElementById('coletaPontos').classList.add('hidden');
-        }
+    <footer>
+        <div class="topo">
+            <div class="estilo">
+                <h2 style="color: #070000;">SOBRE</h2>
+                <ul>
+                    <li style="color: #070000;">INFORMAÇÕES</li>
+                    <li style="color: #070000;">POLÍTICA DE PRIVACIDADE</li>
+                    <li style="color: #070000;">DOAÇÕES</li>
+                </ul>
+            </div>
+            <div class="estilo2">
+                <h2>REFERÊNCIAS</h2>
+                <ul>
+                    <li><a class="links" href="https://www.w3schools.com/" style="color: #fcf9f9;">W3School</a> </li>
+                    <li><a class="links" href="https://youtu.be/Zda2ILLLMPM?list=RDNSZda2ILLLMPM"
+                            style="color: #fcf9f9;">TRAGÉDIA AMBIENTAL</a> </li>
+                    <li><a class="links" href="https://youtu.be/36__Rf6qCjo" style="color: #fcf9f9;">COMO TUDO
+                            ACONTECEU</a> </li>
+                </ul>
+            </div>
+            <div class="estilo3">
+                <h2 style="color: #070000;">TUTORIAIS</h2>
+                <ul>
+                    <li style="color: #070000;">DESIGN</li>
+                    <li style="color: #070000;">MARKETING</li>
+                    <li style="color: #070000;">PROGRAMAÇÃO</li>
+                    <li style="color: #070000;">TUTORIAIS</li>
+                </ul>
+            </div>
+            <div class="estilo4">
+                <h2>OUTROS</h2>
+                <ul>
+                    <li>ESCOLHA 3 LINKS</li>
+                    <li>PARA SUGERIR</li>
+                    <li>AQUI NESSE ESPAÇO</li>
+                </ul>
+            </div>
+        </div>
+        <p style="color: #070000;" style="text-align: center;"> <b>CAVALCANTI <br>
+                GUSTAVO MOREIRA<br>
+                CARLOS BERTOLDO<br>
+                KAIO LOURIVAL<br>
+                JULIE SOUZA<br>
+                &copy; DIREITOS RESERVADOS.</p></b>
+    </footer>
 
-        function submitForm(event) {
-            event.preventDefault();
-            const form = document.getElementById('pixForm');
-            const formData = new FormData(form);
-            const nome = formData.get('nome');
-            const sobrenome = formData.get('sobrenome');
-            const email = formData.get('email');
-            const celular = formData.get('celular');
-            const chavePix = formData.get('chavePix');
-            const valor = formData.get('valor');
-            document.getElementById('mensagem').innerText = `Obrigado, ${nome} ${sobrenome}! Sua doação de R$${valor},00 via PIX (${chavePix}) foi recebida com sucesso. Entraremos em contato pelo email ${email} ou pelo número do celular ${celular} para confirmar os detalhes.`;
-            form.reset();
-        }
-    </script>
-        <img src = https://www.fibrilar.com.br/higiene-limpeza/img/produtos/delivery-produtos-limpeza.jpg alt="doe aqui!" >  
-    <form>
-        <label for="quantidade">Quantidade para doar os produto de limpeza:</label>
-        <input type="number" id="quantidade" name="quantidade">
-        <input type="submit" value="Doar">
-    </form>
-    
-
-        <img src = https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvmV0bkjMK9xF7grM7H5BEZm9viQIUzySP4PngM4CxkA&s alt="doe aqui!">
-    <form>
-        <label for="quantidade">Quantidade para doar os produtos de banho:</label>
-        <input type="number" id="quantidade" name="quantidade">
-        <input type="submit" value="Doar">
-    </form>
-
-    <img src = https://img.freepik.com/fotos-gratis/variedade-plana-com-deliciosa-comida-brasileira_23-2148739179.jpg alt="doe aqui!">
-    <form>
-        <label for="quantidade">Quantidade para doar comida:</label>
-        <input type="number" id="quantidade" name="quantidade">
-        <input type="submit" value="Doar">
-    </form>
 </body>
-
-<footer>
-    <div class="topo">
-      <div class="estilo">
-        <h2 style="color: #070000;">SOBRE</h2>
-        <ul>
-            <li style="color: #070000;">INFORMAÇÕES</li>
-            <li style="color: #070000;">POLÍTICA DE PRIVACIDADE</li>
-            <li style="color: #070000;">DOAÇÕES</li>
-        </ul>
-      </div>
-      <div class="estilo2">
-        <h2>REFERÊNCIAS</h2>
-        <ul>
-            <li><a class="links" href="https://www.w3schools.com/" style="color: #fcf9f9;">W3School</a> </li>
-            <li><a class="links" href="https://youtu.be/Zda2ILLLMPM?list=RDNSZda2ILLLMPM" style="color: #fcf9f9;">TRAGÉDIA AMBIENTAL</a> </li>
-            <li><a class="links" href="https://youtu.be/36__Rf6qCjo" style="color: #fcf9f9;">COMO TUDO ACONTECEU</a> </li>
-        </ul>
-      </div>
-      <div class="estilo3">
-        <h2 style="color: #070000;">TUTORIAIS</h2>
-        <ul>
-            <li style="color: #070000;">DESIGN</li>
-            <li style="color: #070000;">MARKETING</li>
-            <li style="color: #070000;">PROGRAMAÇÃO</li>
-            <li style="color: #070000;">TUTORIAIS</li>
-        </ul>
-      </div>
-      <div class="estilo4">
-        <h2>OUTROS</h2>
-        <ul>
-            <li>ESCOLHA 3 LINKS</li>
-            <li>PARA SUGERIR</li>
-            <li>AQUI NESSE ESPAÇO</li>
-        </ul>
-      </div>
-    </div>
-    <p style="color: #070000;" style="text-align: center;"> CAVALCANTI <br>
-    GUSTAVO MOREIRA<br>
-    CARLOS BERTOLDO<br>
-    KAIO LORIVAL<br>
-    JULIE SOUZA<br>
-     &copy; DIREITOS RESERVADOS.</p> 
-</footer>
 
 </html>
